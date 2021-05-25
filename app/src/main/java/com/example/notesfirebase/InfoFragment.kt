@@ -37,10 +37,10 @@ class InfoFragment: Fragment() {
 //        val snapHelper: SnapHelper = LinearSnapHelper()
 //        snapHelper.attachToRecyclerView(feed_recyclerview)
 
-        val postList = mutableListOf<NotePost>()
+
         postReference.addValueEventListener(object: ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
-
+                val postList = mutableListOf<NotePost>()
                 for (convSnapshot in snapshot.children) {
                     val conv = convSnapshot.getValue(NotePost::class.java)
                     postList.add(conv!!)

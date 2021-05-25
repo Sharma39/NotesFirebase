@@ -27,6 +27,8 @@ class PostAdapter(): RecyclerView.Adapter<PostAdapter.PostViewHolder>() {
     override fun onBindViewHolder(holder: PostViewHolder, position: Int) {
         val post = posts[position]
         holder.itemView.feed_caption_textview.text = post.caption
+
+        //Add setOnClickListener on item
     }
 
 
